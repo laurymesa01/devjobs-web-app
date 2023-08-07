@@ -1,4 +1,4 @@
-section{
+.header{
   height: 200px;
   background-image: url('../../../assets/desktop/bg-pattern-header.svg');
   background-size: cover;
@@ -21,4 +21,18 @@ section{
   background-image: url('../../../assets/desktop/icon-moon.svg');
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+app-search{
+  position: absolute;
+  top: 160px;
+  left: 8%;
+  width: 83.5%;
+}
+
+.jobs-cards-section{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-flow: column;
+  grid-auto-rows: 1fr;
 }

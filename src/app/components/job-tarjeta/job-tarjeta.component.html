@@ -1,0 +1,17 @@
+<div class="max-w-sm rounded overflow-hidden shadow-lg">
+  <div style.background-color="{{job.logoBackground}}" class="logo-img h-16 w-16 px-2 rounded-xl flex justify-center items-center">
+    <img [src]="job.logo" alt="" class="">
+  </div>
+  <div class="px-6 py-4">
+    <p>{{job.postedAt}}</p>
+    <p>.</p>
+    <p>{{job.contract}}</p>
+    <div class="font-bold text-xl mb-2">{{job.position}}</div>
+    <p class="text-gray-700 text-base">
+      {{job.company}}
+    </p>
+    <p>
+      {{job.location}}
+    </p>
+  </div>
+</div>
