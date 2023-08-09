@@ -12,6 +12,9 @@ module.exports = {
         'light-grey': '#F4F6F8',
         'grey': '#9DAEC2',
         'dark-grey': '#6E8098'
+      },
+      fontFamily: {
+        'kumbh': 'Kumbh Sans'
       }
     },
   },

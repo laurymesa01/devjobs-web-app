@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Job } from 'src/app/interfaces/job.interface';
 
 @Component({
@@ -6,9 +7,14 @@ import { Job } from 'src/app/interfaces/job.interface';
   templateUrl: './job-tarjeta.component.html',
   styleUrls: ['./job-tarjeta.component.css']
 })
-export class JobTarjetaComponent {
+export class JobTarjetaComponent implements OnInit{
 
   @Input() job!: Job;
+
+  constructor(private activatedRoute: ActivatedRoute){}
+
+  ngOnInit(){
+  }
 
 
 }
