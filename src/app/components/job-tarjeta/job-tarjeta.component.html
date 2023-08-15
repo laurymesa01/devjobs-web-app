@@ -1,26 +1,26 @@
-<div class="rounded-lg overflow-hidden shadow-lg bg-white relative">
-  <div  style.background-color="{{job.logoBackground}}"
-        class="logo-img h-12 w-14 px-2 rounded-xl flex justify-center items-center absolute left-5 -top-5">
-    <img [src]="job.logo" alt="" class="">
-  </div>
-  <div class="px-6 py-4 mt-10">
-    <div class="flex space-x-2 text-sm  text-dark-grey opacity-50">
-      <p>{{job.postedAt}}</p>
-      <p>.</p>
-      <p>{{job.contract}}</p>
+<div class="rounded-lg shadow-lg bg-white relative dark:bg-very-dark-blue">
+    <div  style.background-color="{{job.logoBackground}}"
+          class="logo-img h-12 w-12 px-2 rounded-xl flex justify-center items-center absolute left-5 -top-5">
+      <img [src]="job.logo" alt="" class="">
     </div>
+    <div class="px-6 py-10">
+      <div class="flex space-x-2 text-sm  text-dark-grey opacity-50">
+        <p>{{job.postedAt}}</p>
+        <p>.</p>
+        <p>{{job.contract}}</p>
+      </div>
 
-    <div  class="font-bold text-xl mb-2 mt-2 cursor-pointer hover:text-dark-grey hover:opacity-70"
-          [routerLink]="['/detail', job.id]"
-          routerLinkActive="active">
-          {{job.position}}
+      <div  class="font-bold text-xl mb-2 mt-2 cursor-pointer hover:text-dark-grey hover:opacity-70 dark:text-white"
+            [routerLink]="['/detail', job.id]">
+            {{job.position}}
+      </div>
+
+      <p class="text-dark-grey text-sm opacity-50">
+        {{job.company}}
+      </p>
+      <p class="mt-8 text-violet font-bold">
+        {{job.location}}
+      </p>
     </div>
-
-    <p class="text-dark-grey text-sm opacity-50">
-      {{job.company}}
-    </p>
-    <p class="mt-8 text-violet font-bold">
-      {{job.location}}
-    </p>
   </div>
-</div>
+

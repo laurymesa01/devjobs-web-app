@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, RouterLinkActive } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -16,4 +16,7 @@ export class HomeComponent implements OnInit{
 
   }
 
+  changeMode(){
+      document.documentElement.classList.toggle('dark');
+  }
 }

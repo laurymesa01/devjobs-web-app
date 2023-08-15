@@ -1,46 +1,54 @@
-<section class="w-100 mb-20 bg-white rounded-lg overflow-hidden flex">
-  <img [src]="job.logo" class="w-24" style.background-color="{{job.logoBackground}}">
-  <div class="flex flex-col">
-    <h2>{{job.company}}</h2>
-    <p>{{job.website}}</p>
-  </div>
-  <button type="button" class="h-12 w-24 mt-8 ml-20 text-violet  bg-violet opacity-10 hover:opacity-25 font-bold rounded text-sm px-5 py-1.5 mb-2">Company Site</button>
+<section class="px-60">
+  <section class="header-info-container pr-10 bg-white dark:bg-very-dark-blue rounded overflow-hidden flex absolute">
+    <div style.background-color="{{job.logoBackground}}" class="w-24 flex justify-center items-center">
+      <img [src]="job.logo" class="h-4 px-2">
+    </div>
+    <div class="flex flex-col pl-10 pt-7">
+      <h2 class="font-bold text-xl dark:text-white">{{job.company}}</h2>
+      <p class="mt-2 text-sm text-dark-grey opacity-50">{{job.website}}</p>
+    </div>
+    <button type="button" class="h-10 w-32 mt-8 ml-52 text-violet dark:text-white bg-violet dark:bg-white dark:bg-opacity-10 bg-opacity-10 hover:bg-opacity-25 dark:hover:bg-opacity-25 font-bold rounded text-sm px-4 py-1.5 mb-2">Company Site</button>
+  </section>
+
+  <section class="main-info-container rounded overflow-hidden  bg-white dark:bg-very-dark-blue px-8 py-8 ml-48">
+      <div class="flex flex-row justify-between">
+        <div>
+          <div class="flex space-x-2 text-sm  text-dark-grey opacity-50">
+            <p>{{job.postedAt}}</p>
+            <p>.</p>
+            <p>{{job.contract}}</p>
+          </div>
+          <h1 class="text-2xl font-bold mt-2 mb-2 dark:text-white">{{job.position}}</h1>
+          <p class="text-sm text-violet font-bold">{{job.location}}</p>
+        </div>
+
+        <button type="button" class="h-10 w-32 mt-5 mr-4 bg-violet hover:bg-ligth-violet text-xs text-white font-bold rounded">Apply Now</button>
+      </div>
+
+    <div class="mt-10">
+        <p class="mb-10 text-dark-grey opacity-50">{{job.description}}</p>
+
+        <div>
+          <h3 class="text-lg font-bold mb-5 dark:text-white">Requirements</h3>
+          <p class="text-dark-grey opacity-50 mb-5">{{job.requirements.content}}</p>
+          <ul *ngFor="let item of job.requirements.items" class="mb-2">
+            <li class="list-disc ml-3 text-dark-grey opacity-50">{{item}}</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold mb-5 mt-10 dark:text-white">What you will do</h3>
+          <p class="text-dark-grey opacity-50 mb-5">{{job.role.content}}</p>
+          <ol *ngFor="let item of job.role.items" class="mb-2 ml-3">
+            <li class="list-decimal text-dark-grey opacity-50">{{item}}</li>
+          </ol>
+        </div>
+      </div>
+  </section>
 </section>
 
-<section class="rounded-lg overflow-hidden shadow-lg bg-white">
-    <div>
-      <div class="flex space-x-2 text-sm  text-dark-grey opacity-50">
-        <p>{{job.postedAt}}</p>
-        <p>.</p>
-        <p>{{job.contract}}</p>
-      </div>
-      <h1>{{job.position}}</h1>
-      <p>{{job.location}}</p>
-      <button type="button" class="h-10 w-24 bg-violet hover:bg-ligth-violet text-xs text-white font-bold rounded">Apply Now</button>
-    </div>
 
-  <div class="px-6 py-4 mt-10">
-      <p>{{job.description}}</p>
-
-      <div>
-        <h3>Requirements</h3>
-        <p>{{job.requirements.content}}</p>
-        <ul *ngFor="let item of job.requirements.items">
-          <li>{{item}}</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3>What you will do</h3>
-        <p>{{job.role.content}}</p>
-        <ol *ngFor="let item of job.role.items">
-          <li>{{item}}</li>
-        </ol>
-      </div>
-    </div>
-</section>
-
-<footer class="bg-white">
+<footer class="bg-white mt-20 h-24">
   <h3></h3>
   <p></p>
   <button type="button" class="h-10 w-24 bg-violet hover:bg-ligth-violet text-xs text-white font-bold rounded">Apply Now</button>
