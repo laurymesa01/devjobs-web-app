@@ -1,4 +1,4 @@
-<section class="mt-20 pt-20 grid grid-cols-3 gap-y-16 gap-x-10">
+<section class="mt-20 pt-20 grid grid-cols-3 gap-y-16 gap-x-10 px-52">
     <div *ngFor="let job of jobs">
       <app-job-tarjeta [job]="job"></app-job-tarjeta>
     </div>
@@ -6,7 +6,13 @@
   </section>
 
   <div class="flex justify-center">
-    <button type="button" class="h-10 w-32 mt-8 ml-20  mb-20 text-white  bg-violet hover:bg-ligth-violet font-bold rounded text-sm px-5 py-1.5">Load More</button>
+    <button type="button"
+            class="h-10 w-32 mt-8 ml-20  mb-20 text-white  bg-violet disabled:bg-ligth-violet hover:bg-ligth-violet font-bold rounded text-sm px-5 py-1.5"
+            [disabled]="btnDisabled"
+            (click)="loadMore()"
+    >
+      Load More
+    </button>
   </div>
 
 

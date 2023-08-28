@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
-
+import { FormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,6 +24,7 @@ import { JobTarjetaComponent } from './components/job-tarjeta/job-tarjeta.compon
   imports: [
     AppRoutingModule,
     BrowserModule,
+    FormsModule,
     HttpClientModule,
   ],
   providers: [],
