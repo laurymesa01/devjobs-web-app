@@ -30,3 +30,8 @@ app-search{
   width: 73.5%;
 }
 
+@media screen and (max-width: 728px) {
+  .header {
+    background-image: url("../../../assets/mobile/bg-pattern-header.svg");
+  }
+}

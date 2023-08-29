@@ -1,6 +1,5 @@
 import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { CheckboxControlValueAccessor } from '@angular/forms';
-
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -13,6 +12,8 @@ export class SearchComponent {
   title   : string = '';
   location: string = '';
   fullTime: boolean = false;
+
+  constructor(){}
 
 
   searchJob(){

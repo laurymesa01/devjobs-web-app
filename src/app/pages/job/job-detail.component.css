@@ -1,6 +1,5 @@
 .header-info-container{
   top: 165px;
-  left: 28%;
   height: 120px;
   width: 700px;
 }
@@ -8,3 +7,67 @@
   margin-top: 130px;
   width: 700px;
 }
+
+li{
+  margin-left: 0;
+}
+
+ol li{
+  counter-increment: lista;
+  position: relative;
+}
+
+li::before{
+  content: "\2022";
+}
+
+ol li::before{
+  content: counter(lista);
+}
+
+@media screen and (max-width: 728px) {
+  .header-info-container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 200px;
+    width: 90%;
+    padding-right: 0;
+  }
+  .img{
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    position: absolute;
+    top: -15px;
+    left: calc(50% - 18px);
+  }
+  .text-header{
+    margin-left: 0;
+  }
+
+  .main-info-container{
+    margin-top: 200px;
+    width: 90%;
+  }
+
+  .main-info{
+    flex-direction: column;
+  }
+
+  .main-info button{
+    width: 100%;
+  }
+
+  .footer-info{
+    display: none;
+  }
+
+  footer button{
+    margin-left: 20px;
+    width: 90%;
+  }
+
+}
+

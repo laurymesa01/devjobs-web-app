@@ -1,4 +1,21 @@
 section{
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 13%;
+  padding-right: 13%;
+}
+
+@media screen and (max-width: 1118px) {
+
+}
+
+@media screen and (max-width: 920px) {
+  section{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 588px) {
+  section{
+    display: flex;
+    flex-direction: column;
+  }
 }

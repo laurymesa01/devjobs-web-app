@@ -1,19 +1,24 @@
-<section class="px-60">
-  <section class="header-info-container pr-10 bg-white dark:bg-very-dark-blue rounded overflow-hidden flex absolute">
-    <div style.background-color="{{job.logoBackground}}" class="w-24 flex justify-center items-center">
-      <img [src]="job.logo" class="h-4 px-2">
+<section class="flex justify-center">
+  <section class="header-info-container pr-10 bg-white dark:bg-very-dark-blue rounded flex justify-between absolute">
+    <div class="flex rounded">
+      <div style.background-color="{{job.logoBackground}}" class="img w-24 flex justify-center items-center rounded">
+        <img [src]="job.logo" class="h-4 px-2">
+      </div>
+      <div class="text-header flex flex-col ml-10 pt-7">
+        <h2 class="font-bold text-xl dark:text-white">{{job.company}}</h2>
+        <p class="mt-2 text-sm text-dark-grey">{{job.website}}</p>
+      </div>
     </div>
-    <div class="flex flex-col pl-10 pt-7">
-      <h2 class="font-bold text-xl dark:text-white">{{job.company}}</h2>
-      <p class="mt-2 text-sm text-dark-grey opacity-50">{{job.website}}</p>
+    <div>
+      <button type="button" class="h-10 w-32 mt-8  text-violet dark:text-white bg-violet dark:bg-white dark:bg-opacity-10 bg-opacity-10 hover:bg-opacity-25 dark:hover:bg-opacity-25 font-bold rounded text-sm px-4 py-1.5 mb-2">Company Site</button>
     </div>
-    <button type="button" class="h-10 w-32 mt-8 ml-52 text-violet dark:text-white bg-violet dark:bg-white dark:bg-opacity-10 bg-opacity-10 hover:bg-opacity-25 dark:hover:bg-opacity-25 font-bold rounded text-sm px-4 py-1.5 mb-2">Company Site</button>
+
   </section>
 
-  <section class="main-info-container rounded overflow-hidden  bg-white dark:bg-very-dark-blue px-8 py-8 ml-48">
-      <div class="flex flex-row justify-between">
+  <section class="main-info-container rounded overflow-hidden  bg-white dark:bg-very-dark-blue px-8 py-8">
+      <div class="main-info flex flex-row justify-between">
         <div>
-          <div class="flex space-x-2 text-sm  text-dark-grey opacity-50">
+          <div class="flex space-x-2 text-sm  text-dark-grey">
             <p>{{job.postedAt}}</p>
             <p>.</p>
             <p>{{job.contract}}</p>
@@ -26,21 +31,27 @@
       </div>
 
     <div class="mt-10">
-        <p class="mb-10 text-dark-grey opacity-50">{{job.description}}</p>
+        <p class="mb-10 text-dark-grey">{{job.description}}</p>
 
         <div>
           <h3 class="text-lg font-bold mb-5 dark:text-white">Requirements</h3>
-          <p class="text-dark-grey opacity-50 mb-5">{{job.requirements.content}}</p>
-          <ul *ngFor="let item of job.requirements.items" class="mb-2">
-            <li class="list-disc ml-3 text-dark-grey opacity-50">{{item}}</li>
+          <p class="text-dark-grey mb-5">{{job.requirements.content}}</p>
+          <ul  class="mb-2">
+            <li *ngFor="let item of job.requirements.items"
+                class="list-none before:text-violet before:pr-8 ml-3 text-dark-grey">
+                  {{item}}
+            </li>
           </ul>
         </div>
 
         <div>
           <h3 class="text-lg font-bold mb-5 mt-10 dark:text-white">What you will do</h3>
-          <p class="text-dark-grey opacity-50 mb-5">{{job.role.content}}</p>
-          <ol *ngFor="let item of job.role.items" class="mb-2 ml-3">
-            <li class="list-decimal text-dark-grey opacity-50">{{item}}</li>
+          <p class="text-dark-grey mb-5">{{job.role.content}}</p>
+          <ol class="mb-2 ml-3">
+            <li *ngFor="let item of job.role.items"
+                class="list-none before:text-violet before:pr-8 before:font-semibold text-dark-grey">
+                  {{item}}
+            </li>
           </ol>
         </div>
       </div>
@@ -48,9 +59,14 @@
 </section>
 
 
-<footer class="bg-white mt-20 h-24">
-  <h3></h3>
-  <p></p>
-  <button type="button" class="h-10 w-24 bg-violet hover:bg-ligth-violet text-xs text-white font-bold rounded">Apply Now</button>
+<footer class="flex justify-center bg-white dark:bg-very-dark-blue mt-20 py-5 h-24">
+  <div class="flex flex-row justify-between" style="width: 700px;">
+    <div class="footer-info flex flex-col">
+      <h3 class="text-lg font-bold dark:text-white">{{job.position}}</h3>
+      <p class="mt-2 text-dark-grey">So Digital Inc.</p>
+    </div>
+    <button type="button" class="h-10 w-28 mt-2 bg-violet hover:bg-ligth-violet text-xs text-white font-bold rounded">Apply Now</button>
+  </div>
+
 
 </footer>
