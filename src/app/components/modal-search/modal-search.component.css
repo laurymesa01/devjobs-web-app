@@ -1,0 +1,12 @@
+.location-icon{
+  width: 13px;
+  height: 18px;
+  display: inline-block;
+  background-image: url('../../../assets/desktop/icon-location.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container{
+  width: 60%;
+}

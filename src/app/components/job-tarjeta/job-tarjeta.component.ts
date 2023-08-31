@@ -11,7 +11,7 @@ export class JobTarjetaComponent implements OnInit{
 
   @Input() job!: Job;
 
-  constructor(private activatedRoute: ActivatedRoute){}
+  constructor(){}
 
   ngOnInit(){
   }

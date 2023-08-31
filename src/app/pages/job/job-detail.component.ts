@@ -34,7 +34,7 @@ export class JobDetailComponent implements OnInit{
   }
 
   constructor(private activatedRoute: ActivatedRoute,
-              private jobsService: JobsService){
+              private jobsService: JobsService,){
   }
 
   ngOnInit() {

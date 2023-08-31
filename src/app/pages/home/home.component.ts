@@ -11,7 +11,10 @@ import { Job } from 'src/app/interfaces/job.interface';
 })
 export class HomeComponent implements OnInit{
 
-  jobs: Job[] = []
+  jobs: Job[] = [];
+  limit = 12;
+  offset = 0;
+  btnDisabled: boolean = false;
 
   constructor(public router: Router,
               private jobsService: JobsService){
@@ -19,17 +22,30 @@ export class HomeComponent implements OnInit{
   }
 
   ngOnInit(){
+    this.jobsService.getJobs(this.limit, this.offset).subscribe(jobs => {
+      this.jobs = jobs;
+      this.offset += this.limit;
+    })
   }
 
-  changeMode(){
-      document.documentElement.classList.toggle('dark');
+
+
+  loadMore(){
+    if(this.offset > this.jobs.length){
+      this.btnDisabled = true;
+    }
+    else{
+      this.jobsService.getJobs(this.limit, this.offset).subscribe(jobs => {
+        this.jobs = this.jobs.concat(jobs);
+        this.offset +=  this.limit;
+      })
+    }
+
   }
 
   searchJob(parametros: any){
     this.jobsService.searchJobs(parametros).subscribe(jobs => {
-      this.jobs = jobs
-      console.log(this.jobs);
-
+      this.jobs = jobs;
     })
   }
 }

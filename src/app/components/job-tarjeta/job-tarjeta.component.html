@@ -11,8 +11,9 @@
       </div>
 
       <div  class="font-bold text-xl mb-2 mt-2 cursor-pointer hover:text-dark-grey hover:opacity-70 dark:text-white"
-            [routerLink]="['/detail', job.id]">
-            {{job.position}}
+            >
+
+            <a [routerLink]="['/job', job.id]">{{job.position}}</a>
       </div>
 
       <p class="text-dark-grey text-sm opacity-50">

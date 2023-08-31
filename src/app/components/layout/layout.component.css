@@ -1,0 +1,38 @@
+.header{
+  height: 200px;
+  background-image: url('../../../assets/desktop/bg-pattern-header.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header-container{
+  width: 74%;
+}
+
+.mode-header-container .light{
+  display: inline-block;
+  width: 18px;
+  height: 16px;
+  background-image: url('../../../assets/desktop/icon-sun.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mode-header-container .dark{
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url('../../../assets/desktop/icon-moon.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 728px) {
+  .header {
+    background-image: url("../../../assets/mobile/bg-pattern-header.svg");
+  }
+
+  .header-container{
+    width: 85%;
+  }
+}

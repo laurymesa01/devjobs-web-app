@@ -11,6 +11,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { ListadoComponent } from './pages/listado/listado.component';
 import { JobDetailComponent } from './pages/job/job-detail.component';
 import { JobTarjetaComponent } from './components/job-tarjeta/job-tarjeta.component';
+import { LayoutComponent } from './components/layout/layout.component';
+import { ModalSearchComponent } from './components/modal-search/modal-search.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { JobTarjetaComponent } from './components/job-tarjeta/job-tarjeta.compon
     ListadoComponent,
     JobDetailComponent,
     JobTarjetaComponent,
+    LayoutComponent,
+    ModalSearchComponent,
   ],
   imports: [
     AppRoutingModule,

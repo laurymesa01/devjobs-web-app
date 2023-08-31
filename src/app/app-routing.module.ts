@@ -4,18 +4,20 @@ import { HomeComponent } from './pages/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { ListadoComponent } from './pages/listado/listado.component';
 import { JobDetailComponent } from './pages/job/job-detail.component';
+import { AppComponent } from './app.component';
+import { LayoutComponent } from './components/layout/layout.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: LayoutComponent,
     children: [
       {
         path: '',
-        component: ListadoComponent
+        component: HomeComponent,
       },
       {
-        path: 'detail/:id',
+        path: 'job/:id',
         component: JobDetailComponent
       }
     ]

@@ -1,68 +1,16 @@
-<!-- <section class="px-4 search-container  h-16 flex flex-row justify-between space-x-6 relative mt-2 rounded-md shadow-sm bg-white dark:bg-very-dark-blue cursor-pointer">
-  <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-6">
-    <span class="search"></span>
-  </div>
-
-  <form action="" class="flex flex-row space-x-6">
-    <input  type="text"
-            name="title"
-            id="title"
-            class="focus:outline-none w-full py-1.5 pl-4 pr-20text-sm text-very-dark-blue dark:bg-very-dark-blue placeholder:text-grey border-r border-dark-grey border-opacity-25"
-            style=""
-            placeholder="Filter by title, companies, expertise…"
-            [(ngModel)]="title"
-    />
-
-    <div class="flex items-center w-full border-r border-dark-grey border-opacity-25">
-      <span class="location-icon"></span>
-      <input  type="text"
-              name="location"
-              id="location"
-              class="focus:outline-none w-full  py-1.5 pl-4 pr-20 text-sm text-very-dark-blue placeholder:text-grey dark:bg-very-dark-blue"
-              style="width: 100%;"
-              placeholder="Filter by location"
-              [(ngModel)]="location"
-      />
-    </div>
-
-    <div class="flex items-center mt-2 mb-1">
-      <input  type="checkbox"
-              value=""
-              class="checkbox w-5 h-5 text-blue-600 bg-light-grey rounded dark:bg-gray-700"
-
-      />
-      <label class="text-sm font-bold w-24 text-very-dark-blue dark:text-white">Full Time Only</label>
-
-    </div>
-
-    <button type="submit"
-            class="h-10 mt-3  text-white bg-violet hover:bg-ligth-violet font-bold rounded text-sm px-5 py-1.5 mb-2"
-            style=""
-            (click)="searchJob()"
-    >
-      Search
-    </button>
-
-  </form>
-
-
-
-</section> -->
-
 <section class="h-16 px-4 flex flex-row rounded-md bg-white dark:bg-very-dark-blue">
   <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-6">
     <span class="search"></span>
   </div>
-  <form action="" class="flex flex-row space-x-8 w-full">
+  <form action="" class="flex flex-row space-x-6 w-full">
     <input  type="text"
             name="title"
             id="title"
-            class="focus:outline-none  py-1.5 pl-4 ml-6 text-sm dark:bg-very-dark-blue text-very-dark-blue placeholder:text-grey border-r border-dark-grey border-opacity-25"
-            style="width: 38%;"
-            placeholder="Filter by title, companies, expertise…"
+            class="title focus:outline-none  py-1.5 pl-4 ml-6 text-sm dark:bg-very-dark-blue text-very-dark-blue placeholder:text-grey border-r border-dark-grey border-opacity-25"
+            [placeholder]="placeholderTitle"
             [(ngModel)]="title"
     />
-    <div class="flex items-center border-r border-dark-grey border-opacity-25" style="width: 30%;">
+    <div class="location-container flex items-center border-r border-dark-grey border-opacity-25">
       <span class="location-icon"></span>
       <input  type="text"
               name="location"
@@ -73,23 +21,40 @@
       />
     </div>
 
-    <div class="flex items-center">
+    <div class="checkbox-container flex items-center">
       <input  type="checkbox"
               name="fullTime"
               value=""
               class="checkbox w-5 h-5 text-blue-600 bg-light-grey rounded dark:bg-gray-700 cursor-pointer"
               [(ngModel)]="fullTime"
       />
-      <label class="ml-4 text-sm font-bold text-very-dark-blue dark:text-white">Full Time Only</label>
+      <label class="ml-4 text-sm font-bold text-very-dark-blue dark:text-white">{{labelCheckBox}}</label>
+    </div>
+
+    <div class="flex">
+      <button (click)="showModal()">
+        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" class="fill-dark-grey dark:fill-white">
+          <path d="M19.108 0H.86a.86.86 0 00-.764.455.833.833 0 00.068.884l6.685 9.202.007.01c.242.32.374.708.375 1.107v7.502a.825.825 0 00.248.594.865.865 0 00.942.18l3.756-1.4c.337-.1.56-.41.56-.784v-6.092c0-.399.132-.787.375-1.108l.007-.009 6.685-9.202c.19-.26.217-.6.068-.884A.86.86 0 0019.108 0z"/>
+        </svg>
+      </button>
     </div>
 
     <div class="flex">
       <button type="submit"
               class="h-10 w-24 mt-3 justify-end text-white bg-violet hover:bg-ligth-violet font-bold rounded text-sm"
               (click)="searchJob()">
-        Search
+          {{labelSearch}}
+
+        <svg *ngIf="labelSearch == ''" width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="fill-white">
+          <path d="M17.112 15.059h-1.088l-.377-.377a8.814 8.814 0 002.15-5.784A8.898 8.898 0 008.898 0 8.898 8.898 0 000 8.898a8.898 8.898 0 008.898 8.899c2.211 0 4.23-.808 5.784-2.143l.377.377v1.081l6.845 6.832 2.04-2.04-6.832-6.845zm-8.214 0A6.16 6.16 0 118.9 2.737a6.16 6.16 0 010 12.322z">
+          </path>
+        </svg>
       </button>
     </div>
 
+
+
   </form>
 </section>
+
+<app-modal-search *ngIf="modal"></app-modal-search>

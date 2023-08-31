@@ -1,28 +1,3 @@
-.header{
-  height: 200px;
-  background-image: url('../../../assets/desktop/bg-pattern-header.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.mode-header-container .light{
-  display: inline-block;
-  width: 18px;
-  height: 16px;
-  background-image: url('../../../assets/desktop/icon-sun.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.mode-header-container .dark{
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  background-image: url('../../../assets/desktop/icon-moon.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 app-search{
   position: absolute;
   top: 160px;
@@ -30,8 +5,4 @@ app-search{
   width: 73.5%;
 }
 
-@media screen and (max-width: 728px) {
-  .header {
-    background-image: url("../../../assets/mobile/bg-pattern-header.svg");
-  }
-}
+
