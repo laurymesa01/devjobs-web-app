@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class LayoutComponent {
 
   changeMode(){
+
     document.documentElement.classList.toggle('dark');
   }
 }

@@ -1,4 +1,4 @@
-<div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+<div *ngIf="modal" class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
   <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
 
   <div class="fixed inset-0 z-10 overflow-y-auto">
@@ -10,16 +10,17 @@
               <input  type="text"
                       name="location"
                       id="location"
-                      class="focus:outline-none ml-4  text-sm dark:bg-very-dark-blue text-very-dark-blue placeholder:text-grey "
+                      class="focus:outline-none ml-4  text-sm dark:bg-very-dark-blue text-very-dark-blue placeholder:text-grey placeholder:opacity-70"
                       placeholder="Filter by location..."
+                      [(ngModel)]="location"
               />
             </div>
             <div class="py-4 px-4">
               <input  type="checkbox"
                       name="fullTime"
                       value=""
-                      class="checkbox w-4 h-4 text-blue-600 bg-light-grey rounded dark:bg-gray-700 cursor-pointer mt-2"
-
+                      class="checkbox w-4 h-4 bg-dark-grey bg-opacity-25 border-none rounded-sm  cursor-pointer checked:bg-violet mt-2"
+                      [(ngModel)]="fullTime"
               />
               <label class="ml-4 text-sm font-bold text-very-dark-blue dark:text-white">Full Time Only</label>
 

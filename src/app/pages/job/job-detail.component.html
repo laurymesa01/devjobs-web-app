@@ -6,7 +6,7 @@
       </div>
       <div class="text-header flex flex-col ml-10 pt-7">
         <h2 class="font-bold text-xl dark:text-white">{{job.company}}</h2>
-        <p class="mt-2 text-sm text-dark-grey">{{job.website}}</p>
+        <p class="mt-2 text-sm text-dark-grey opacity-70">{{job.website}}</p>
       </div>
     </div>
     <div>
@@ -18,7 +18,7 @@
   <section class="main-info-container rounded overflow-hidden  bg-white dark:bg-very-dark-blue px-8 py-8">
       <div class="main-info flex flex-row justify-between">
         <div>
-          <div class="flex space-x-2 text-sm  text-dark-grey">
+          <div class="flex space-x-2 text-sm  text-dark-grey opacity-70">
             <p>{{job.postedAt}}</p>
             <p>.</p>
             <p>{{job.contract}}</p>
@@ -31,11 +31,11 @@
       </div>
 
     <div class="mt-10">
-        <p class="mb-10 text-dark-grey">{{job.description}}</p>
+        <p class="mb-10 text-dark-grey opacity-70">{{job.description}}</p>
 
         <div>
           <h3 class="text-lg font-bold mb-5 dark:text-white">Requirements</h3>
-          <p class="text-dark-grey mb-5">{{job.requirements.content}}</p>
+          <p class="text-dark-grey mb-5 opacity-70">{{job.requirements.content}}</p>
           <ul  class="mb-2">
             <li *ngFor="let item of job.requirements.items"
                 class="list-none before:text-violet before:pr-8 ml-3 text-dark-grey">
@@ -46,10 +46,10 @@
 
         <div>
           <h3 class="text-lg font-bold mb-5 mt-10 dark:text-white">What you will do</h3>
-          <p class="text-dark-grey mb-5">{{job.role.content}}</p>
+          <p class="text-dark-grey mb-5 opacity-70">{{job.role.content}}</p>
           <ol class="mb-2 ml-3">
             <li *ngFor="let item of job.role.items"
-                class="list-none before:text-violet before:pr-8 before:font-semibold text-dark-grey">
+                class="list-none before:text-violet before:pr-8 before:font-semibold text-dark-grey opacity-70">
                   {{item}}
             </li>
           </ol>
@@ -63,7 +63,7 @@
   <div class="flex flex-row justify-between" style="width: 700px;">
     <div class="footer-info flex flex-col">
       <h3 class="text-lg font-bold dark:text-white">{{job.position}}</h3>
-      <p class="mt-2 text-dark-grey">So Digital Inc.</p>
+      <p class="mt-2 text-dark-grey opacity-70">So Digital Inc.</p>
     </div>
     <button type="button" class="h-10 w-28 mt-2 bg-violet hover:bg-ligth-violet text-xs text-white font-bold rounded">Apply Now</button>
   </div>

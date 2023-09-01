@@ -5,11 +5,6 @@ module.exports = {
   theme: {
     extend: {
     },
-    screens: {
-      sm: '480px',
-      md: '728px',
-      lg: '1046',
-    },
     colors:{
       'violet': '#5964E0',
       'ligth-violet': '#939BF4',

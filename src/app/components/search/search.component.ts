@@ -18,11 +18,11 @@ export class SearchComponent implements OnInit{
   labelCheckBox   : string  = ''   ;
   labelSearch     : string  = ''   ;
   modal: boolean = false;
+  parameters = {}
 
   Breakpoints = Breakpoints;
-  currentBreakpoint: string = '';
   readonly breakpoint$ = this.breakpointObserver
-    .observe([Breakpoints.Large, Breakpoints.Medium, Breakpoints.Small, '(min-width: 500px)'])
+    .observe(['(min-width: 1092px)', '(max-width: 1092px)', '(max-width: 840px)'])
     .pipe(
       tap(value => console.log(value)),
       distinctUntilChanged()
@@ -42,25 +42,37 @@ export class SearchComponent implements OnInit{
       this.placeholderTitle = 'Filter by title, companies, expertise…';
       this.labelCheckBox = 'Full Time Only';
       this.labelSearch = 'Search';
+      this.modal = false;
+    }
+    else if(this.breakpointObserver.isMatched('(max-width: 840px)')){
+      this.labelSearch = '';
+      this.placeholderTitle = 'Filter by title...';
     }
     else if(this.breakpointObserver.isMatched('(max-width: 1092px)')){
       this.placeholderTitle = 'Filter by title...';
       this.labelCheckBox = 'Full Time';
       this.labelSearch = 'Search';
-    }
-    else if(this.breakpointObserver.isMatched('(max-width: 876px)')){
-      this.labelSearch = '';
+      this.modal = false;
     }
   }
 
 
-  searchJob(){
-    const parametros = {
-      title: this.title,
-      location: this.location,
-      fullTime: this.fullTime
-    };
-    this.parametros.emit(parametros);
+  searchJob(event?: any){
+    if (event) {
+      this.parameters = {
+        title: this.title,
+        location: event.location,
+        fullTime: event.fullTime
+      };
+    }else {
+      this.parameters = {
+        title: this.title,
+        location: this.location,
+        fullTime: this.fullTime
+      };
+    }
+
+    this.parametros.emit(this.parameters);
 
     this.title = '';
     this.location = '';
@@ -71,10 +83,12 @@ export class SearchComponent implements OnInit{
   showModal(){
     if (!this.modal) {
       this.modal = true;
+      this.placeholderTitle = 'Enter job desc...'
     }
     else{
       this.modal = false;
     }
+
   }
 
 }

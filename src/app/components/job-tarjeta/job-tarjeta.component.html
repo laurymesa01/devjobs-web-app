@@ -4,7 +4,7 @@
       <img [src]="job.logo" alt="" class="">
     </div>
     <div class="px-6 py-10">
-      <div class="flex space-x-2 text-sm  text-dark-grey opacity-50">
+      <div class="flex space-x-2 text-sm font-normal opacity-70  text-dark-grey">
         <p>{{job.postedAt}}</p>
         <p>.</p>
         <p>{{job.contract}}</p>
@@ -16,7 +16,7 @@
             <a [routerLink]="['/job', job.id]">{{job.position}}</a>
       </div>
 
-      <p class="text-dark-grey text-sm opacity-50">
+      <p class="text-dark-grey text-sm font-normal opacity-70">
         {{job.company}}
       </p>
       <p class="mt-8 text-violet font-bold">
