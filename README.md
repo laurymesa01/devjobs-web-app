@@ -8,7 +8,6 @@ This is a solution to the [Devjobs web app challenge on Frontend Mentor](https:/
 
   - [The challenge](#the-challenge)
   - [Screenshots](#screenshots)
-  - [Links](#links)
   - [Built with](#built-with)
 
 ### The challenge
@@ -28,9 +27,6 @@ Users should be able to:
 ![Job page with light mode](./job-light.png)
 ![Job page with dark mode](./job-dark.png)
 
-### Links
-
-- GitHub URL: [Add solution URL here](https://github.com/laurymesa01/devjobs-web-app.git)
 
 
 ### Built with
