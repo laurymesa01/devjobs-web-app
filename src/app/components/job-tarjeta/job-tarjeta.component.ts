@@ -7,14 +7,9 @@ import { Job } from 'src/app/interfaces/job.interface';
   templateUrl: './job-tarjeta.component.html',
   styleUrls: ['./job-tarjeta.component.css']
 })
-export class JobTarjetaComponent implements OnInit{
+export class JobTarjetaComponent{
 
   @Input() job!: Job;
-
-  constructor(){}
-
-  ngOnInit(){
-  }
 
 
 }

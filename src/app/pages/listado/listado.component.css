@@ -3,10 +3,6 @@ section{
   padding-right: 13%;
 }
 
-@media screen and (max-width: 1118px) {
-
-}
-
 @media screen and (max-width: 920px) {
   section{
     grid-template-columns: repeat(2, 1fr);

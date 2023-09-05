@@ -9,10 +9,7 @@
 
 .container{
   width: 60%;
-}
-
-.checkbox{
-  appearance: none;
+  /* margin-top: 250px; */
 }
 
 .checkbox:checked{
@@ -20,4 +17,10 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media screen and (max-width: 450px){
+  .container{
+    width: 80%;
+  }
 }

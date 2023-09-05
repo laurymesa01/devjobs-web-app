@@ -10,6 +10,7 @@ import { distinctUntilChanged, tap } from 'rxjs';
 export class SearchComponent implements OnInit{
 
   @Output() parametros = new EventEmitter<any>();
+  @Output() modalSearch = new EventEmitter<boolean>();
 
   title           : string  = ''   ;
   location        : string  = ''   ;
@@ -64,6 +65,8 @@ export class SearchComponent implements OnInit{
         location: event.location,
         fullTime: event.fullTime
       };
+      this.modal = event.modal;
+      this.placeholderTitle = 'Filter by title...'
     }else {
       this.parameters = {
         title: this.title,
@@ -84,9 +87,6 @@ export class SearchComponent implements OnInit{
     if (!this.modal) {
       this.modal = true;
       this.placeholderTitle = 'Enter job desc...'
-    }
-    else{
-      this.modal = false;
     }
 
   }

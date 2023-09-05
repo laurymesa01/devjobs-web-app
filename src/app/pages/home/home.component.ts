@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { JobsService } from '../../services/jobs.service';
-import { map } from 'rxjs';
 import { Job } from 'src/app/interfaces/job.interface';
 
 @Component({

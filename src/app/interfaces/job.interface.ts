@@ -12,7 +12,6 @@ export interface Job {
   description:    string;
   requirements:   Requirements;
   role:           Requirements;
-  [key: string]:  any
 }
 
 export enum Contract {

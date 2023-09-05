@@ -4,8 +4,8 @@
     <div class="mode-header-container flex flex-row h-10  space-x-6">
         <p> <span class="light"></span></p>
         <label class="relative inline-block items-center cursor-pointer">
-            <input type="checkbox" value="" class="sr-only peer" (click)="changeMode()">
-            <div class="w-11 h-6 bg-white peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-violet  after:hover:bg-ligth-violet after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+            <input type="checkbox" value="" class="sr-only peer" (change)="changeMode()" [checked]="checked">
+            <div class="w-10 h-6 bg-white peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[4px] after:left-[2px] after:bg-violet  after:hover:bg-ligth-violet after:rounded-full after:h-4 after:w-4 after:transition-all"></div>
         </label>
         <p> <span class="dark"></span></p>
     </div>

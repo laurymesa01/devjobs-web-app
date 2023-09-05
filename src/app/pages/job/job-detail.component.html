@@ -1,12 +1,12 @@
 <section class="flex justify-center">
   <section class="header-info-container pr-10 bg-white dark:bg-very-dark-blue rounded flex justify-between absolute">
     <div class="flex rounded">
-      <div style.background-color="{{job.logoBackground}}" class="img w-24 flex justify-center items-center rounded">
+      <div style.background-color="{{job.logoBackground}}" class="img-container w-24 flex justify-center items-center rounded">
         <img [src]="job.logo" class="h-4 px-2">
       </div>
       <div class="text-header flex flex-col ml-10 pt-7">
         <h2 class="font-bold text-xl dark:text-white">{{job.company}}</h2>
-        <p class="mt-2 text-sm text-dark-grey opacity-70">{{job.website}}</p>
+        <p class="mt-2 text-sm text-dark-grey opacity-70">{{job.company | lowercase}}.com</p>
       </div>
     </div>
     <div>

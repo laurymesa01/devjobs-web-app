@@ -1,4 +1,4 @@
-<section class="h-16 px-4 flex flex-row rounded-md bg-white dark:bg-very-dark-blue">
+<section class="search-container h-16 px-4 flex flex-row rounded-md bg-white dark:bg-very-dark-blue">
   <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-6">
     <span class="search"></span>
   </div>
@@ -25,7 +25,7 @@
       <input  type="checkbox"
               name="fullTime"
               value=""
-              class="checkbox w-5 text-base h-5 bg-dark-grey bg-opacity-25 border-none rounded-sm  cursor-pointer checked:bg-violet"
+              class="checkbox  w-5 text-base h-5 bg-dark-grey bg-opacity-25 border-none rounded-sm  cursor-pointer checked:bg-violet appearance-none"
               [(ngModel)]="fullTime"
       />
       <label class="ml-4 text-sm font-bold text-very-dark-blue dark:text-white">{{labelCheckBox}}</label>
@@ -67,6 +67,7 @@
 
 <app-modal-search *ngIf="modal"
                   [modal]="modal"
-                  (parametros)="searchJob($event)">
+                  (parametros)="searchJob($event)"
+                  class="backdrop overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
 </app-modal-search>
 
