@@ -3,5 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body{
+  min-width: 320px;
+  width: 100%;
+}
 
