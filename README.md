@@ -8,7 +8,9 @@ This is a solution to the [Devjobs web app challenge on Frontend Mentor](https:/
 
   - [The challenge](#the-challenge)
   - [Screenshots](#screenshots)
+  - [Links](#links)
   - [Built with](#built-with)
+  - [Author](#author)
 
 ### The challenge
 
@@ -27,7 +29,9 @@ Users should be able to:
 ![Job page with light mode](./job-light.png)
 ![Job page with dark mode](./job-dark.png)
 
+### Links
 
+- Live Site URL: (https://dev-jobs-a43d7.web.app/)
 
 ### Built with
 
@@ -38,4 +42,8 @@ Users should be able to:
 - Tailwind CSS
 - Angular
 
+## Author
+
+- Frontend Mentor - [@laurymesa01](https://www.frontendmentor.io/profile/laurymesa01)
+- LinkedIn - [@lauraelenamesa](https://www.linkedin.com/in/lauraelenamesa/)
 
