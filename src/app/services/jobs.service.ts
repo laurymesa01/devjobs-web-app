@@ -8,7 +8,7 @@ import { Job } from '../interfaces/job.interface';
 })
 export class JobsService {
 
-  private url: string = 'https://json-server-jobs.vercel.app/';
+  private url: string = 'https://json-server-jobs.vercel.app';
 
   constructor(private http: HttpClient) { }
 
